@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Activity 7</title>
+
+    <link rel="stylesheet" href="final.css">
+
+    <link rel="icon" type="image/png" href="personal logo.png">
+</head>
+
+<body>
+    
+   
+<section class="page page1 active">
+    <div class="overlay"></div>
+
+    <div class="page1-content">
+        <h1>Hello</h1>
+        <h2>Welcome to my Activity 7</h2>
+        <p>Mary Therese Abadilla</p>
+    </div>
+</section>
+
+
+
+   
+<section class="page page2">
+
+    <h1>
+        Video Play/Pause using Button
+    </h1>
+
+    <div class="video-container">
+        <video id="myVideo" autoplay muted loop>
+            <source src="fight.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <button class="control-btn" id="videoBtn">
+        Pause
+    </button>
+
+</section>
+
+
+
+    
+<section class="page page3">
+
+    <h1 class="title">Responsive Table</h1>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>FAVORITE</th>
+                <th>FRUIT</th>
+                <th>ANIME</th>
+                <th>COLOR</th>
+                <th>PET</th>
+            </tr>
+
+            <tr>
+                <td>😎NAME:</td>
+                <td>WATERMELON</td>
+                <td>ONE PIECE</td>
+                <td>BLUE</td>
+                <td>COCKROACH</td>
+            </tr>
+
+            <tr>
+                <td>🌟RATE:</td>
+                <td>SUPERB DELICIOUS 10/10</td>
+                <td>LEGEND INFINITY/10</td>
+                <td>LOVE IT 10/10</td>
+                <td>EW -1000/10</td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+
+    
+<section class="page page4" id="page4">
+
+    <button class="change-btn" id="changeColorBtn">
+        Change Color
+    </button>
+
+</section>
+
+
+
+
+
+
+
+
+    
+<div class="pagination">
+
+    <button onclick="prevPage()">Previous</button>
+
+    <button onclick="showPage(0)" class="page-btn active-btn">1</button>
+    <button onclick="showPage(1)" class="page-btn">2</button>
+    <button onclick="showPage(2)" class="page-btn">3</button>
+    <button onclick="showPage(3)" class="page-btn">4</button>
+
+    <!-- NEW BUTTONS -->
+    <button onclick="window.location.href='Act5_Abadilla_hero.html'">
+        Act5
+    </button>
+
+    <button onclick="window.location.href='Abad4.html'">
+        Act4
+    </button>
+
+    <button onclick="window.location.href='Act2_abad.html'">
+        Act2
+    </button>
+
+    <button onclick="window.location.href='Act3.html'">
+        Act3
+    </button>
+
+    <button onclick="nextPage()">Next</button>
+
+</div>
+
+<script>
+
+const pages = document.querySelectorAll('.page');
+const pageButtons = document.querySelectorAll('.page-btn');
+
+let currentPage = 0;
+
+function showPage(index){
+
+    pages.forEach(page => page.classList.remove('active'));
+    pageButtons.forEach(btn => btn.classList.remove('active-btn'));
+
+    pages[index].classList.add('active');
+    pageButtons[index].classList.add('active-btn');
+
+    currentPage = index;
+}
+
+function nextPage(){
+
+    if(currentPage < pages.length - 1){
+        showPage(currentPage + 1);
+    }
+    else{
+        window.location.href = 'Act5_Abadilla_hero.html';
+    }
+
+}
+
+
+function prevPage(){
+
+    if(currentPage > 0){
+        showPage(currentPage - 1);
+    }
+
+}
+
+
+
+const video = document.getElementById('myVideo');
+const videoBtn = document.getElementById('videoBtn');
+
+videoBtn.addEventListener('click', () => {
+
+    if(video.paused){
+        video.play();
+        videoBtn.textContent = 'Pause';
+    }
+    else{
+        video.pause();
+        videoBtn.textContent = 'Play';
+    }
+
+});
+
+
+
+const page4 = document.getElementById('page4');
+const changeBtn = document.getElementById('changeColorBtn');
+
+changeBtn.addEventListener('mouseenter', () => {
+    page4.style.background = '#0077ff';
+});
+
+changeBtn.addEventListener('mouseleave', () => {
+    page4.style.background = 'white';
+});
+
+</script>
+
+
+</body>
+
+</html>

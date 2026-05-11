@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <meta charset="UTF-8">
+    <title> Login Page </title>
+    <link rel="icon" type="image/png" href="personal logo.png">
+    <link rel="stylesheet" href="Act6.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap" rel="stylesheet">
+        
+    </head>
+
+
+<div class="left">
+  <h1>Login Page</h1>
+ <p>
+  Please input username and password<br>
+  in order to see my <span class="highlight">"Activity 7"</span><br>
+  Username: egg <br>
+  Password: happy<br>
+</p>
+</div>
+
+<div class="right">
+  <div class="login-box">
+    <img src="pfp.png" class="logo">
+    <h3>USER LOGIN</h3>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <p class="error" id="error"></p>
+
+    <button onclick="login()">Log in</button>
+  </div>
+</div>
+
+<script>
+function login() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  
+  if (user === "egg" && pass === "happy") {
+    
+    window.location.href = "final.html";
+  } else {
+    document.getElementById("error").innerText = "Wrong username or password";
+  }
+}
+</script>
+
+</body>
+</html>

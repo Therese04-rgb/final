@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>
+    A4_Abadilla
+</title>
+
+<link rel="icon" type="image/png" href="personal logo.png">
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body{
+    height: 100vh;
+    background:
+        linear-gradient(rgba(89, 89, 89, 0.463),
+        rgba(196, 196, 196, 0.138)),
+        url('Yuika.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    width: 100%;
+    height: 120px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+}
+
+
+.moving-text{
+    position: absolute;
+    top: 20px;
+    white-space: nowrap;
+    font-size: 65px;
+    font-weight: 400;
+    color: yellow;
+
+    text-shadow:
+         15px 0 20px #0077ff,
+        -15px 0 20px #00e5ff;
+
+    animation: moveText 12s linear infinite;
+}
+
+@keyframes moveText{
+    from{
+        transform: translateX(100vw);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.center-box{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+
+.side-image img{
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #151e3f;
+}
+
+
+.music-box{
+    text-align: left;
+}
+
+
+.song-title{
+    color: yellow;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #151e3f;
+}
+
+
+audio{
+    width: 350px;
+    margin-bottom: 20px;
+    
+}
+
+
+.album{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.album img{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.album-text{
+    color: green;
+    font-size: 22px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px white;    }
+
+
+
+
+.pagination{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(255, 255, 255, 0.177);
+    padding:12px 20px;
+    border-radius:50px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    display:flex;
+    gap:8px;
+    z-index:999;
+}
+
+.pagination button{
+    border:none;
+    background:#eaeaea;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.pagination button:hover{
+    background:#0077ff;
+    color:white;
+}
+
+.pagination button.active-btn{
+    background:#0077ff;
+    color:white;
+}
+
+
+
+
+
+
+</style>
+</head>
+<div class="pagination">
+
+    <button onclick="window.location.href='Act5_Abadilla_hero.html'">
+        Previous
+    </button>
+
+    <button onclick="window.location.href='final.html'">
+        Activity7
+    </button>
+
+    <button onclick="window.location.href='Act5_Abadilla_hero.html'">
+        Act5
+    </button>
+
+    <button onclick="window.location.href='Abad4.html'">
+        Act4
+    </button>
+
+    <button onclick="window.location.href='Act2_abad.html'">
+        Act2
+    </button>
+
+    <button onclick="window.location.href='Act3.html'">
+        Act3
+    </button>
+
+    <button onclick="window.location.href='Act2_abad.html'">
+    Next
+</button>
+
+</div>
+<body>
+
+
+<div class="banner">
+    <div class="moving-text">
+        Perhaps, one last glance.
+    </div>
+</div>
+
+
+<div class="center-box">
+
+    
+    <div class="side-image">
+        <img src="suki.jpg" alt="Yuika Image">
+    </div>
+
+    
+    <div class="music-box">
+
+        <div class="song-title">
+            『ユイカ』(Yuika) - 好きだから。(Sukidakara)
+        </div>
+
+        <audio controls autoplay loop>
+            <source src="Sukidakara.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="album">
+
+            <img src="sunflower.gif" alt="Album Cover">
+
+            <span class="album-text">
+                A heartfelt song expressing unspoken love, longing, and daydreams<br>
+                of being with someone special while cherishing their unique quirks.
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

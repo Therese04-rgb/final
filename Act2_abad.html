@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title> CSS ACTIVITY 2</title>
+    <link rel="icon" type="image/png" href="personal logo.png">
+
+    <style> 
+    body{ margin: 20px;
+    font-family: arial;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;}
+
+.row{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.box{
+    display: inline-block;
+}
+
+.a2-button{
+    background-color:black;
+    color:white;
+    border: 2px solid white; 
+    height: 40px; 
+    width: 130px; 
+    cursor: pointer;}
+
+.b2-button{
+    background-color:rgb(255,216,20);
+    border: none; 
+    height: 40px; 
+    width: 150px; 
+    border-radius: 20px; 
+    cursor: pointer;}
+
+.c2-button{
+    background-color:rgb(46,164,79);
+    border: none; 
+    color: white;
+    height: 40px; 
+    width: 100px; 
+    border-radius: 6px;
+    font-weight: bold; 
+    cursor: pointer;}
+
+.d2-button{
+    background-color:rgb(121,82,179);
+    border: none;
+    color: white;
+    height: 40px; 
+    width: 120px; 
+    border-radius: 4px; 
+    font-weight: bold;
+    cursor: pointer; 
+    margin-right: 10px;}
+
+.d2download-button{
+    background-color:white; 
+    border: 1px solid rgb(108,117,125); 
+    color:rgb(108, 117, 125);
+    height: 40px; 
+    width: 120px; 
+    border-radius: 4px; 
+    font-weight: bold;
+    cursor: pointer;}
+    
+.e2-button{
+    background-color:rgb(10,102,194);
+    border: none;
+    color: white;
+    height: 45px; 
+    width: 260px; 
+    border-radius: 25px; 
+    font-weight: bold;
+    cursor: pointer; 
+    margin-right: 10px;}
+
+.e2save-button{
+    background-color:white; 
+    border: 1px solid rgb(10,102,194); 
+    color:rgb(10, 102, 194);
+    height: 45px; width: 100px; 
+    border-radius: 25px; 
+    font-weight: bold;
+    cursor: pointer;}
+
+
+.pagination{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(255, 255, 255, 0.177);
+    padding:12px 20px;
+    border-radius:50px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    display:flex;
+    gap:8px;
+    z-index:999;
+}
+
+.pagination button{
+    border:none;
+    background:#eaeaea;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.pagination button:hover{
+    background:#0077ff;
+    color:white;
+}
+
+.pagination button.active-btn{
+    background:#0077ff;
+    color:white;
+}
+
+
+
+
+
+    </style>
+</head>
+
+
+
+<div class="pagination">
+
+    <button onclick="window.location.href='Abad4.html'">
+        Previous
+    </button>
+
+    <button onclick="window.location.href='final.html'">
+        Activity7
+    </button>
+
+    <button onclick="window.location.href='Act5_Abadilla_hero.html'">
+        Act5
+    </button>
+
+    <button onclick="window.location.href='Abad4.html'">
+        Act4
+    </button>
+
+    <button onclick="window.location.href='Act2_abad.html'">
+        Act2
+    </button>
+
+
+     <button onclick="window.location.href='Act3.html'">
+        Act 3
+    </button>
+
+    <button onclick="window.location.href='Act3.html'">
+    Next
+</button>
+
+</div>
+
+
+<body>
+    <div class="row">
+        <div class="box"> 
+        <p> 2a. Uber</p>
+        <button class="a2-button">Request now</button>
+    </div>
+
+    
+    <div class="box">
+        <p> 2b. Amazon</p>
+        <button class="b2-button">Add to Cart</button>
+    </div>
+
+
+    <div class="box"> 
+        <p> 2c. GitHub</p>
+        <button class="c2-button">Sign up</button>
+    </div>
+</div>
+
+
+<div class="row">
+   <div class="box">
+        <p> 2d. Bootstrap</p>
+        <button class="d2-button">Get started</button>
+        <button class="d2download-button">Download</button>
+    </div>
+
+    <div class="box">
+        <p> 2e. LinkedIn</p>
+        <button class="e2-button">Apply on company website</button>
+        <button class="e2save-button">Save</button>
+    </div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gudetama Happy</title>
+<link rel="icon" type="image/png" href="personal logo.png">
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Caudex";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("happy.png") center/cover no-repeat;
+}
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.welcome-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px; 
+  margin-bottom: 20px;
+  border: 3px solid #fcb935;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #e6a800;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #88b2ef;
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+  <img src="gotama happy.gif" class="welcome-img">
+  <p>A special Dance!</p>
+
+  
+  <button onclick="logout()">Back</button>
+</div>
+
+<script>
+function logout() {
+  window.location.href = "Act5_Abadilla_hero.html";
+}
+</script>
+
+</body>
+</html>
